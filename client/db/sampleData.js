@@ -22,7 +22,7 @@ export const dummyAnswers = [
     questionID: 1,
     content:
       "You need to use the `flask-cors` package on the backend. Install it and wrap your Flask app with CORS.",
-    votes: 5,
+    votes: 4,
   },
   {
     questionID: 2,
