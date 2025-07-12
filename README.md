@@ -2,7 +2,7 @@
 
 # StackIt – A Minimal Q&A Forum Platform
 
-## 📖 Overview
+## Overview
 **StackIt** is a minimalistic question-and-answer platform designed to support collaborative learning and structured knowledge sharing. It is simple, user-friendly, and focuses on delivering a seamless experience for asking and answering questions within a community.
 
 ---
