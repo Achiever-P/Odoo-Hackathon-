@@ -1,9 +1,13 @@
 import React from "react";
 import { ArrowUp, ArrowDown, MessageCircle } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
-const QuestionCard = ({ title, snippet, votes, answers, tags }) => {
+
+const QuestionCard = ({ id, title, snippet, votes, answers, tags }) => {
+  const navigate = useNavigate();
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center" 
+    onClick={()=>navigate(`/question/${id}`)}>
       <div className="bg-white rounded-xl shadow-md p-4 border border-gray-100 hover:shadow-lg transition flex gap-4 w-[1100px]">
         {/* Voting Section */}
         <div className="flex flex-col items-center text-gray-500">

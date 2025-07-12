@@ -11,6 +11,7 @@ const QuestionList = ({ questions }) => {
       {questions.map((q, index) => (
         <QuestionCard
           key={index}
+          id={index}
           title={q.title}
           snippet={q.snippet}
           votes={q.votes}
