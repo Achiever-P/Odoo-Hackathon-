@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const QuestionCard = ({ id, title, snippet, votes, answers, tags }) => {
   const navigate = useNavigate();
   return (
-    <div className="flex justify-center" 
+    <div className="flex justify-center cursor-pointer" 
     onClick={()=>navigate(`/question/${id}`)}>
       <div className="bg-white rounded-xl shadow-md p-4 border border-gray-100 hover:shadow-lg transition flex gap-4 w-[1100px]">
         {/* Voting Section */}
