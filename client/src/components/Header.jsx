@@ -1,7 +1,8 @@
 import React, { useRef } from 'react'
 import { useNavigate } from 'react-router-dom' 
-import { assets } from '../assets/assets'
+// import { assets } from '../assets/assets'
 import { useAppContext } from '../context/AppContext'
+import { Search } from 'lucide-react'
 
 const Header = () => {
 
@@ -25,31 +26,11 @@ const Header = () => {
 
   return (
     <div className="mx-8 sm:mx-16 xl:mx-24 relative">
-      <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mt-20 mb-8">
-
-        {/* Ask New Question Button */}
-        <button
-          onClick={handleAskQuestion}
-          className="flex-1 bg-primary text-white px-6 py-3 rounded-md hover:scale-105 transition-all shadow-md"
-        >
-          Ask New Question
-        </button>
-
-        {/* Filter Dropdown */}
-        <select
-          className="flex-1 border border-gray-300 rounded-md px-4 py-3 text-gray-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
-        >
-          <option value="newest">Newest Answers</option>
-          <option value="most-upvoted">Most Upvoted Answers</option>
-          <option value="oldest">Oldest Answers</option>
-          <option value="most-downvoted">Most Downvoted Answers</option>
-        </select>
-
+      <div className="flex mt-10">
         {/* Search Bar */}
         <form
           onSubmit={onSubmitHandler}
-          className="flex flex-1 items-center border border-gray-300 bg-white rounded-md overflow-hidden shadow-sm"
-        >
+          className="flex flex-1 items-center border border-gray-300 bg-white rounded-full overflow-hidden shadow-sm">
           <input
             ref={inputRef}
             type="text"
@@ -59,11 +40,32 @@ const Header = () => {
           />
           <button
             type="submit"
-            className="bg-primary text-white px-4 py-3 rounded-full hover:scale-105 transition-all"
-          >
-            <img src={assets.search_icon} alt="Search" className="w-5 h-5" />
+            className="bg-primary text-white px-4 py-3 rounded-full hover:scale-105 transition-all">
+            <Search size={20} />
           </button>
         </form>
+      </div>
+
+      <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mt-5 mb-15">
+
+        {/* Ask New Question Button */}
+        <button
+          onClick={handleAskQuestion}
+          className="flex-1 bg-primary text-white px-6 py-3 rounded-full hover:scale-105 transition-all shadow-md"
+        >
+          Ask New Question
+        </button>
+
+        {/* Filter Dropdown */}
+        <select
+          className="flex-1 border border-gray-300 rounded-full px-4 py-3 text-gray-600 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
+        >
+          <option value="newest">Newest Answers</option>
+          <option value="most-upvoted">Most Upvoted Answers</option>
+          <option value="oldest">Oldest Answers</option>
+          <option value="most-downvoted">Most Downvoted Answers</option>
+        </select>
+
       </div>
 
       {/* Clear Search Button */}
